@@ -1,0 +1,259 @@
+/*font police*/
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+/*background color*/
+body {
+    background-color: white;
+}
+
+figure{
+    position : relative;
+    left : 30%;
+    margin : 0;
+    padding : 0;
+    opacity : 0;
+    transition : all 2.5s ease;
+}
+
+/*textarea cant resize*/
+textarea{
+    resize : none;
+}
+/*css for the different forms*/
+/*to align to the center, choose the heigth of th form*/
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex; /*to center the element in relation to the body tag */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+/*definition of the class step*/
+/*align the different element horizontally*/
+.step {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+}
+/*style of the different class step of the form*/
+.step1, .step2, .step3, .step4 {
+    width: 5rem;
+    padding: 0.5rem 0;
+    background: #fff;
+    color: #666;
+    text-align: center;
+}
+.step1,.step2,.step3 {
+    border-right: 1px solid #666;
+}
+/*creation of the form class*/
+.form {
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    width: 25rem; /*width of the form*/
+    box-shadow: 1.5rem 0.7rem 1.5rem rgba(51, 51, 51, 0.2); /*box parameter*/
+    display: none; /*we don't display it, we will display only the active class later*/
+    border-radius: 2rem;
+    overflow: hidden;
+}
+/*containeur of the form*/
+form-container {
+    color: #fff;
+    height: 10rem;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+/*size for the title*/
+.form-title {
+    font-size: 1.7rem;
+    padding: 1.5rem 0;
+}
+/*padding for the text*/
+.form-text {
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman';
+}
+/*characteristic of the input in the form*/
+input[type="text"] {
+    padding: 0.8rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    width: 20rem;
+    display: block;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid #bdbdbb;
+}
+/*style of the form button */
+.form__btn {
+    background: #333;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    width: 7rem;
+    margin: 1rem auto;
+    border-radius: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+/*style of the text */
+.form-message-text {
+    width: 25rem;
+    background: #fff;
+    color: black;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(51, 51, 51, 0.2);
+    animation: fadeIn 0.8s; /*animation when it is well send */
+    border-radius: 1rem;
+    font-size : 20px;
+}
+
+/*class of the active form */
+/*display the activ form/ z-index puts it above other elements */
+.form-active {
+    display: block;
+}
+/*animation of the active form to make a nice entrance from left to right*/
+.form-active-animate {
+    animation: moveRight 1s;
+}
+/*animation of the inactive form hides the previous form*/
+.form-inactive {
+    display: block;
+    animation: moveLeft 1s;
+}
+/*step of the active form*/
+.step-active {
+    background: linear-gradient(to bottom right,red,blue);
+    color: #fff;
+    border: 1px solid #666;
+}
+/*Use of keyframes to make animation*/
+/*move to the right*/
+@keyframes moveRight {
+    
+    0% {
+        transform: translateX(-27rem) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+}
+/*move to the left*/
+@keyframes moveLeft {
+    
+    0% {
+        transform: translateX(0rem) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(27rem) scale(0.9);
+        opacity: 0;
+    }
+}
+/*to make it disapears*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.reboot{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background:linear-gradient(to bottom right,red,blue);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+.reboot:hover {
+    background-color: rgb(142, 9, 204);
+}
+
+.reboot:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+/*Comment section css*/
+p, h2{
+    orphans: 3;
+    widows: 3;
+    color : black; 
+    font-size : 15px;
+}
+
+h2 {
+    page-break-after: avoid;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-comment {
+    position: relative;
+    min-height: 1px;
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 100%;
+    float: left;
+}
+
+.row:before,.row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+.center {
+    position: relative;
+    min-height: 2px;
+    padding-right: 50px;
+    padding-left: 50px; 
+    float:left;
+    width: 100%;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+

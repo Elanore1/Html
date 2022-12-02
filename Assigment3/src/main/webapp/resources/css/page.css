@@ -1,0 +1,123 @@
+body {
+    background-color:white;
+}
+
+.rectangle {
+    width: 480px;
+    height: 740px;
+    margin-left: 45%;
+    box-shadow: 5px 10px 20px #888888;
+    background-color: #5a5656;
+    z-index : 1;
+    position:absolute;
+}
+/*coktail title pos*/
+.coktail-title{
+    font-family: Calibri;
+    font-size: 45px;
+    z-index: 2;
+    margin-right: 40%;
+    margin-top: 4%;
+    background: linear-gradient(to bottom right,red,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*pos of the 2 images*/
+.img1{
+    margin-left: 60%;
+    z-index:2;
+    position : absolute;
+    top: 190px;
+    width: 380px;
+    height: 490px;
+}
+
+.img2 {
+    margin-left: 35%;
+    z-index: 2;
+    position: absolute;
+    top: 322px;
+    width: 345px;
+    height: 355px;
+}
+
+p{
+    font-family: Calibri;
+    color : black;
+    font-size:22px;
+}
+
+li {
+    font-family: Calibri;
+    color: black;
+    font-size:20px;
+}
+
+/*p for the coktail description*/
+.coktail-descript{
+    margin-left: 145px;
+    margin-right: 900px;
+    font-size: 20px;
+    text-align:center;
+}
+
+.time{
+    margin-left:145px;
+    position : absolute;
+}
+/*pos of the time recipe*/
+.recipe {
+    margin-left: 215px;
+    font-size: 18px;
+    margin-top: 2.5%;
+}
+/*For the ingredient*/
+.ingredient {
+    margin-left: 185px;
+    margin-right:970px;
+    margin-top: 2%;
+}
+/*grid for the recipe*/
+.wrapper {
+    margin-top : 25%;
+    margin-right: 200px;
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 40px;
+    grid-gap: 30px;
+}
+.wrapper > div{
+    background-color : #c89cf8;
+    font-family: Arial;
+    border-radius : 25px;   
+}
+
+.wrapper div > p {
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+/*For the end of the page, the tips*/
+.tips {
+    margin-right: 100px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 100px;
+    grid-gap: 30px;
+}
+
+.tips > div {
+    font-family: Arial;
+}
+.tips-title {
+    font-family: Arial;
+    font-size: 45px;
+}
+
+.tips div > p {
+    font-family: Arial;
+    font-size : 20px;
+}

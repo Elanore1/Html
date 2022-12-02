@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Site for coktails and games during evening  -->
+        <title>Evening House</title>
+        <link rel="shortcut icon" type="image/png" href="./resources/images/Home/EHL.png" />
+        <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+        <link href="./resources/css/contact.css" type="text/css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    	<script src="js/contact.js"></script>
+
+    </head>
+
+    <body>
+        <!-- Navbar (on top of the site) -->
+        <div class="nav" id="Nav">
+            <ul>
+                <li>
+                    <a href="index.html" id="Home">Home</a>
+                </li>
+                <span class="titre-degrade">Evening House</span>
+                <li>
+                    <a href="coktails.html">Coktails</a>
+                    <ul class="sub">
+                        <li><a href="coktails.html#classic">Classics</a></li>
+                        <li><a href="coktails.html#alcohol-free">alcohol-free</a></li>
+                        <li><a href="coktails.html#trendy">Trendy cocktails</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cooking.html">Cooking</a>
+                    <ul class="sub">
+                        <li><a href="cooking.html#appetizer">Appetizer</a></li>
+                        <li><a href="cooking.html#menu">Menu</a></li>
+                        <li><a href="cooking.html#dessert">Dessert</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="activity.html">Activity</a>
+                    <ul class="sub">
+                        <li><a href="activity.html#guessing">Guessing</a></li>
+                        <li><a href="activity.html#card">Card</a></li>
+                        <li><a href="activity.html#bluff">Bluff</a></li>
+                        <li><a href="activity.html#speed">Speed</a></li>
+                    </ul>
+                </li>
+                <span class="logo"><img width="140" heigt="50" id="logo" src="./resources/images/Home/EH.png" /></span>
+            </ul>
+        </div>
+        <br /><br /><br /><br />
+        <!--Title of the page contact us-->
+        <h1>CONTACT US</h1>
+        <!--Description of the contact us page-->
+        <p2>
+            <br /><br />
+            We are waiting for your feedback on the different themes we have proposed !
+        </p2>
+        <p2>
+            <br /><br /><br />
+            Don't hesitate to give us your favorite recipe or to tell us about the best games we proposed. Below you can find a form for anything you have to tell us. Every week after receiving your reviews, we compare what you liked best to update our trends and improve our advice on this site.
+        </p2>
+        <div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <figure><img src="./resources/images/Home/Review.jpg" /> </figure>
+        </div>
+        <!--Form the add a review and create an account-->
+        <main>
+            <div class="step">
+                <div class="step1 step-active">Step 1</div>
+                <div class="step2">Step 2</div>
+                <div class="step3">Step 3</div>
+                <div class="step4">Finish</div>
+            </div>
+            <form id="form1" class="form form-active" name="AccountForm" onsubmit="return AccountConfirm()" method="POST">
+                <div class="form-container">
+                    <h1 class="form-title">
+                        <!--Title of the section-->
+                        Account Creation
+                    </h1>
+                    <p class="form-text">
+                        <!--description of the section-->
+                        Create an account :
+                    </p>
+                </div>
+                <!--Input to complete-->
+                <input type="text" id="Name" name="Name" placeholder="Name" />
+                <input type="text" id="Email" name="Email" placeholder="Email" />
+                <input type="text" id="Password" name="Password" placeholder="Password" />
+                <button class="form__btn" id="btn-1" name="submit">Next</button>
+            </form>
+            <form id="form2" class="form" name="PersonnalForm" onsubmit="return PersonnalConfirm()" method="POST">
+                <div class="form-container">
+                    <h1 class="form-title">
+                        Personnal Info
+                    </h1>
+
+                    <p class="form-text">
+                        Tell us more about you.
+                    </p>
+                </div>
+
+                <input type="text" id="Age" name="Age" placeholder="Age" />
+                <input type="text" id="Gender" name="Gender" placeholder="Gender" />
+                <input type="text" id="Job" name="Job" placeholder="Job" />
+                <button class="form__btn" id="btn-2-prev">Previous</button>
+                <button class="form__btn" id="btn-2-next">Next</button>
+            </form>
+            <form id="form3" class="form" name="CommentForm" onsubmit="return CommentConfirm()" method="POST">
+                <div class="form-container">
+                    <h1 class="form-title">
+                        Message
+                    </h1>
+
+                    <p class="form-text">
+                        Your feedback
+                    </p>
+                </div>
+                <!--<input type="text" name="Comment" placeholder="Comment" />-->
+                <textarea cols="45" rows="10" id="Comment" name="Comment" placeholder="Comment"></textarea>
+                <button class="form__btn" id="btn-3">Submit</button>
+            </form>
+            <div class="form-message"></div>
+        </main>
+        <!-- creation of the button to reboot the form -->
+        &emsp;&emsp;&emsp;&emsp;<button class="reboot" id="reboot">New comment</button>
+        <!-- visualisation of the comment -->
+        <br /><br /><h3>&emsp;&emsp;&emsp; Comments :</h3><br />
+        <!-- Comment section -->
+        <div class="center" id="comment">
+        	<table id="comment-table" border='1'>
+        		<tr>
+		           <th>Name</th>
+		           <th>Email</th>
+		           <th>Password</th>
+		        </tr>
+		    </table>
+            <!-- comment article will be add when we add a comment -->
+            <hr>
+        </div><!--/Center Column-->
+    </body>
+    
+    <script type="text/javascript" language="javascript">
+        /*function for the sticky navbar*/
+        //we target the nav element
+        let objNav = document.getElementById("Nav");
+        //we memorise the position of nav
+        let posNav = objNav.offsetTop;
+        function sticky() {
+            //pos of the cursor
+            var posCursor = this.pageYOffset;
+            //test of the difference between the scroll and nav
+            if (posNav - posCursor < 1) {
+                objNav.style.position = "fixed";
+                objNav.style.top = 0;
+                objNav.style.zIndex = 1;
+            }
+            if (posCursor < 180) {
+                objNav.style.position = "relative";
+            }
+        }
+        window.addEventListener("scroll", sticky);//use of the stiky function when we scroll
+            
+        //to scroll the image
+        var select = document.querySelectorAll("figure")[0];
+        var posSelect = select.offsetTop;
+        function effect() {
+            var posCursor = this.pageYOffset;
+            if (posSelect - posCursor < 400) {
+                select.style.left = "30%";
+                select.style.opacity = 1;
+            } else {
+                select.style.left = "130%";
+                select.style.opacity = 0;
+            }
+        }
+        window.addEventListener("scroll", effect);
+
+        //Script for the form//
+        //we use querySelector to select the buttons of the form
+        const formBtn1 = document.querySelector("#btn-1")
+        const formBtnPrev2 = document.querySelector("#btn-2-prev")
+        const formBtnNext2 = document.querySelector("#btn-2-next")
+        const formBtn3 = document.querySelector("#btn-3")
+        //When button 1 is click
+        formBtn1.addEventListener("click", function (e) {
+            if (AccountConfirm() == true) {//if the confirmation is good 
+                gotoNextForm(formBtn1, formBtnNext2, 1, 2) //e use the function go to next form
+                e.preventDefault() //We use preventDefault to prevent the page from reloading
+            }
+        })
+        //When button 2 next is click
+        formBtnNext2.addEventListener("click", function (e) {
+            if (PersonnalConfirm() == true) {//if the confirmation is good 
+                gotoNextForm(formBtnNext2, formBtn3, 2, 3) //e use the function go to next form
+                formBtn3.parentElement.style.display = "block"
+                e.preventDefault()//We use preventDefault to prevent the page from reloading
+            } 
+        })
+        //When button 2 previous is click
+        formBtnPrev2.addEventListener("click", function (e) {
+            gotoNextForm(formBtnNext2, formBtn1, 2, 1)
+            e.preventDefault()//We use preventDefault to prevent the page from reloading
+        })
+        //When button 3 is click
+        formBtn3.addEventListener("click", function (e) {
+            if(CommentConfirm() == true) {
+                document.querySelector(`.step3`).classList.remove("step-active")
+                document.querySelector(`.step4`).classList.add("step-active")
+                formBtn3.parentElement.style.display = "none"
+                document.querySelector(".form-message").style.display = "block"
+                //We add a message with innerHTML to add the html content
+                document.querySelector(".form-message").innerHTML = `<h3 class="form-message-text"> Your comment has been sent </h3>`
+                e.preventDefault()//We use preventDefault to prevent the page from reloading              
+            } else {
+                e.preventDefault()
+            }
+            
+        })
+        //We implement the gotoNextForm function
+        const gotoNextForm = (prev, next, stepPrev, stepNext) => {
+            //we use the button to get the form
+            const prevForm = prev.parentElement //select th form element
+            const nextForm = next.parentElement
+            const nextStep = document.querySelector(`.step${stepNext}`)
+            const prevStep = document.querySelector(`.step${stepPrev}`)
+            //add the active and inactive state to the previous and next form
+            nextForm.classList.add("form-active")
+            nextForm.classList.add("form-active-animate")
+            prevForm.classList.add("form-inactive")
+            //we change the active step element
+            prevStep.classList.remove("step-active")
+            nextStep.classList.add("step-active")
+            setTimeout(() => {
+            //remove active and inactive classes to the previous and next form after 1s
+            prevForm.classList.remove("form-active")
+            prevForm.classList.remove("form-inactive")
+            nextForm.classList.remove("form-active-animate")
+            }, 1000)
+        }
+
+        //Function for the validation of the first form
+        function AccountConfirm() {
+            var name = document.forms["AccountForm"]["Name"];
+            var email = document.forms["AccountForm"]["Email"];
+            var password = document.forms["AccountForm"]["Password"];
+
+            //We test the value of the different attribut before the submit
+            if (name.value == "") {//if name is empty
+                alert("Enter your name");
+                name.focus();
+                return false;
+            }
+            if (email.value == "") {//if email is empty
+                alert("Enter your email");
+                email.focus();
+                return false;
+            }
+            if (email.value.indexOf("@", 0) < 0) {//if email doesn't have @
+                alert("Enter a valid email, '@' is missing");
+                email.focus();
+                return false;
+            }
+            if (email.value.indexOf(".", 0) < 0) {//if email doesn't have .
+                alert("Enter a valid email, '.' is missing");
+                email.focus();
+                return false;
+            }
+            if (password.value == "") {//if password is empty
+                alert("Enter your password");
+                password.focus();
+                return false;
+            }
+            //if the password doesn't comport a special character
+            if (password.value.indexOf("@", 0) < 0 && password.value.indexOf("#", 0) < 0 && password.value.indexOf("%", 0) < 0 && password.value.indexOf("*", 0) < 0 && password.value.indexOf("&", 0) < 0) {
+                alert("Add a special character '#' or '@' or '%' or '*' or '&'");
+                password.focus();
+                return false;
+            }
+            return true;//when all is good we return true
+        }
+        ///Function for the validation of the second form
+        function PersonnalConfirm() {
+            var age = document.forms["PersonnalForm"]["Age"];
+            var gender = document.forms["PersonnalForm"]["Gender"];
+            var job = document.forms["PersonnalForm"]["Job"];
+
+            //We test the value of the different attribut before the submit
+            if (age.value == "") {//if age is empty
+                alert("Enter your age");
+                age.focus();
+                return false;
+            }
+            if (age.value < 10 || age.value > 100) {//if age is wrong
+                alert("Enter a valid age");
+                age.focus();
+                return false;
+            }
+            if (gender.value == "") {//if gender is empty
+                alert("Enter your gender");
+                gender.focus();
+                return false;
+            }
+            if (gender.value != "Male" && gender.value != "Female") {//if gender is empty
+                alert("Enter a valid gender : Male or Female");
+                gender.focus();
+                return false;
+            }
+            if (job.value == "") {//if job is empty
+                alert("Enter your job");
+                job.focus();
+                return false;
+            }
+            return true; //if all is good we return true
+        }
+        ///Function for the validation of the third form
+        function CommentConfirm() {
+            var comment = document.forms["CommentForm"]["Comment"];
+
+            //We test the value of the different attribut before the submit
+            if (comment.value == "") {//if age is empty
+                alert("Enter your comment");
+                comment.focus();
+                return false;
+            }
+            storeData();//we use the store data function
+            return true; //if all is good we return true
+        }
+        //to store the data of the form
+        function storeData(){
+            //we get the value of the form
+            var name = document.forms["AccountForm"]["Name"].value;
+            var email = document.forms["AccountForm"]["Email"].value;
+            var password = document.forms["AccountForm"]["Password"].value;
+            var age = document.forms["PersonnalForm"]["Age"].value;
+            var gender = document.forms["PersonnalForm"]["Gender"].value;
+            var job = document.forms["PersonnalForm"]["Job"].value;
+            var comment = document.forms["CommentForm"]["Comment"].value;
+
+            var string = name + '\t' + email + '\t' + password + '\t' + age + '\t' + gender + '\t' + job + '\t' + comment + '\t';
+            //using the localstorage to tock the string 
+            var data = localStorage.getItem("data");
+            if(data==null){//if its empty
+                localStorage.setItem("data",string);//storing the item "data" by this
+            }else{//not empyt
+                string = data + string; //we had the previous data stored
+                localStorage.setItem("data",string);//storing the item "data" by this
+            }
+
+            getData();
+        }
+        //to get the data store
+        function getData(){
+            //we take the localStorageInfo 
+            let info = localStorage.getItem("data");
+            //We split the info
+            data = info.split('\t'); 
+            //we create var into the body
+            var body = document.querySelector('body');
+            //we use the div of the class center
+            var center = document.querySelector('.center');
+            var myH3 = document.createElement('h3');
+            var divcenter = document.createElement('div');
+            divcenter.className = 'center';
+            //Adding a new comment at the end of the page
+            for (var i = data.length-8; i < data.length; i++) {
+                if(data[i]!=null){
+                    var myRow = document.createElement('div');
+                    myRow.className = 'row';
+                    var article = document.createElement('article');
+                    article.className = 'col-comment';
+                    var h2 = document.createElement('h2');
+                    var p = document.createElement('p');
+                    var ul = document.createElement('ul');
+                    ul.className = 'list-inline';
+                    //we had the name
+                    h2.textContent = data[i];//it's the first element
+                    //we had the comment of the person
+                    p.textContent = data[i+6];//it's the 6th element
+                    //at the end we add more info about the person
+                    var age = document.createElement('li');
+                    age.textContent = data[i+3];//it's the 3th element
+                    var gender = document.createElement('li');
+                    gender.textContent = data[i+4];//it's the 4th element
+                    var job = document.createElement('li');
+                    job.textContent = data[i+5];//it's the 5th element
+                    //adding li to the ul created before
+                    ul.appendChild(age);
+                    ul.appendChild(gender);
+                    ul.appendChild(job);
+                    //we had the info with a space
+                    article.appendChild(h2);
+                    article.appendChild(document.createElement('br'));
+                    article.appendChild(p);
+                    article.appendChild(document.createElement('br'));
+                    article.appendChild(ul);
+                    article.appendChild(document.createElement('br'));
+                    myRow.appendChild(article);
+
+                    divcenter.appendChild(myRow);
+                    divcenter.appendChild(document.createElement('hr'));
+                    i=i+6;
+                }
+                
+            }
+            body.appendChild(divcenter);
+        }
+        
+        //function to enter a new comment
+        const btn = document.querySelector("#reboot");
+        btn.addEventListener("click", function (e) {
+            //we remove the step active on step 4
+            document.querySelector(`.step4`).classList.remove("step-active")
+            document.querySelector(`.step1`).classList.add("step-active")
+            const form1 = formBtn1.parentElement//using the first form
+            document.getElementById("form1").reset()
+            document.getElementById("form2").reset()
+            document.getElementById("form3").reset()
+            document.querySelector(".form-message").style.display = "none"
+            form1.classList.add("form-active")
+            form1.classList.add("form-active-animate")
+            e.preventDefault() //We use preventDefault to prevent the page from reloading
+        })
+
+    </script>
+
+</html>

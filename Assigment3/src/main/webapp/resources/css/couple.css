@@ -1,0 +1,66 @@
+/*font police*/
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+/*background color*/
+body {
+    background-color: white;
+}
+
+.img {
+    width: 100%;
+    height: 830px;
+    padding: 0 0 16% 0;
+    background: white;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 90px;
+    background: linear-gradient(to bottom right,red,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 25px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.couple {
+    margin: 0 30px 15px 30px;
+    background-color: #000000;
+    top: 1400px;
+    left: 60px;
+    position: absolute;
+}
+
+.pos2 {
+    margin: 0 30px 15px 30px;
+    background-color: #000000;
+    top: 2960px;
+    left: 60px;
+    position: absolute;
+}
+
+.text {
+    top: 1340px;
+    margin-left: 720px;
+    width: 725px;
+}
+
+.text2 {
+    top: 1340px;
+    margin-left: 520px;
+    width: 800px;
+}
+
+.black {
+    float: left;
+    margin: 0 30px 15px 30px;
+    background-color: #000000;
+}

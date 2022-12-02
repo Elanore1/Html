@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Head of the document -->
+        <!-- Site for coktails and games during evening  -->
+        <title>Evening House</title>
+        <!-- To have the logo in the top of the page  -->
+        <link rel="shortcut icon" type="image/png" href="./resources/images/Home/EHL.png" />
+        <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    	<script src="js/index.js"></script>
+    </head>
+    <body>
+        <!-- Navbar (on top of the site) -->
+        <div class="nav" id="Nav">
+            <!--Use of the class nav to create the navbar -->
+            <ul>
+                <li>
+                    <a href="#" id="Home">Home</a>
+                    <!-- Home bar Vertical-->
+                    <div class="bar" id="Homenav">
+                        <!--When we click on  the button Homenav in the main, an horizontal navbar appears-->
+                        <img width="210" heigt="10" id="fermer" src="./resources/images/Home/croix.png" top="120px" />
+                        <b>
+                            <!-- Description of the vertical navbar : referring to the type of the site-->
+                            <a href="#" class="bar-element"><img width="140" heigt="50" id="logo" src="./resources/images/Home/EH.png" top="70px" /></a>
+                            <a href="#" class="bar-element">ABOUT US</a>
+                            <a href="#Overview" class="bar-element"><p1>Overview</p1></a>
+                            <a href="#selection" class="bar-element">OUR SELECTION</a>
+                            <a href="#selection" class="bar-element"><p1>Familly</p1></a>
+                            <a href="#selection" class="bar-element"><p1>Friends</p1></a>
+                            <a href="#selection" class="bar-element"><p1>Lover</p1></a>
+                            <a href="#currentTrend" class="bar-element">CURRENT TRENDS </a>
+                            <a href="#Toptrend" class="bar-element"><p1>Top Trends</p1></a>
+                            <a href="#contact" class="bar-element"><p1>Contact-us</p1></a>
+                        </b>
+                    </div>
+                </li>
+                <!-- Horizontal navbar -->
+                <span class="titre-degrade">Evening House</span>
+                <!--Use of li to create the block that appears when we have the mouse on different element -->
+                <li>
+                    <a href="coktails.html">Coktails</a>
+                    <ul class="sub">
+                        <!--sub partie of the horizontal navbar-->
+                        <li><a href="coktails.html#classic">Classics</a></li>
+                        <li><a href="coktails.html#alcohol-free">alcohol-free</a></li>
+                        <li><a href="coktails.html#trendy">Trendy cocktails</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cooking.html">Cooking</a>
+                    <ul class="sub">
+                        <!--sub partie of the horizontal navbar-->
+                        <li><a href="cooking.html#appetizer">Appetizer</a></li>
+                        <li><a href="cooking.html#menu">Menu</a></li>
+                        <li><a href="cooking.html#dessert">Dessert</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="activity.html">Activity</a>
+                    <ul class="sub">
+                        <!--sub partie of the horizontal navbar-->
+                        <li><a href="activity.html#guessing">Guessing</a></li>
+                        <li><a href="activity.html#card">Card</a></li>
+                        <li><a href="activity.html#bluff">Bluff</a></li>
+                        <li><a href="activity.html#speed">Speed</a></li>
+                    </ul>
+                </li>
+                <span class="logo"><img width="140" heigt="50" id="logo" src="./resources/images/Home/EH.png" /></span>
+            </ul>
+        </div><!--end of navbar-->
+        <!--Second part : descritpion of the site -->
+        <div class="rect">
+            <!--text on a transparent-grey rectangle for the site-->
+            <ul class="transparent-grey">All the ideas to plan the best evenings with family and friends !</ul>
+            <img src="./resources/images/Home/menu.jpg" />
+            <a href="#selection"><img class="couple" src="./resources/images/Home/couple1.png" onmouseover="this.src='./resources/images/Home/couple2.png'" onmouseout="this.src='./resources/images/Home/couple1.png'" /></a>
+            <a href="#selection"><img class="friend" src="./resources/images/Home/friends1.png" onmouseover="this.src='./resources/images/Home/friends2.png'" onmouseout="this.src='./resources/images/Home/friends1.png'" /></a>
+            <a href="#selection"><img class="fam" src="./resources/images/Home/familly1.png" onmouseover="this.src='./resources/images/Home/familly2.png'" onmouseout="this.src='./resources/images/Home/familly1.png'" /></a>
+            <!-- Section overview -->
+            <h1 id="Overview"><br /><br />Evening House your favorite party planning site!<br /><br /></h1>
+            <!--description of the site-->
+            <p2> All our advice to organize your evenings with friends, family or even with your better half. You can find our best selection of meals, drinks and games to have a great time.You will find on this site the details of our recipes as well as some indications on the origin and some anectodes on these dishes and cocktails. In addition to all this, we propose you some games to have fun with several people with the material you will need and the detailed rules of the game.<br /><br /></p2>
+        </div>
+        <!-- Section our selection -->
+        <div class="selection" id="selection">
+            <h1><br />OUR SELECTION <br /><br /></h1>
+            <figure>
+                <!--use of figure to make an effect-->
+                <!--when we scroll, the selection appears from the right to the left-->
+                <div class="selectionHolder">
+                    <div class="selectionContent" id="couple">
+                        <a href="couple.html">
+                            <img src="./resources/images/Home/couple.jpg" alt="" />
+                            <h2>Couple's evening </h2>
+                        </a>
+                        <p>Our selection for a successful romantic evening! Find a candlelit meal, games and incredible cocktails to amaze your half.<br /><br /></p>
+
+                    </div>
+                </div>
+                <div class="selectionHolder">
+                    <div class="selectionContent" id="friend">
+                        <a href="friends.html">
+                            <img src="./resources/images/Home/amis.jpg" alt="" />
+                            <h2>Friend's evening </h2>
+                        </a>
+                        <p>Our selection to spend a great evening with friends, all the cocktails of the moment and a huge menu of dishes to share.</p>
+
+                    </div>
+                </div>
+                <div class="selectionHolder">
+                    <div class="selectionContent" id="familly">
+                        <a href="familly.html">
+                            <img src="./resources/images/Home/famille.jpg" alt="" />
+                            <h2>Familly's evening </h2>
+                        </a>
+                        <p>Our selection of family gatherings by the fire with games for all ages, huge meals and even alcohol-free cocktails for the little ones.<br /><br /></p>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <!-- Section Current trend -->
+        <div class="trendSection" id="currentTrend">
+            <h1 id="Toptrend"><br />CURRENT TRENDS</h1>
+
+            <a href="trend.html"><h2>Top Trend</h2></a>
+            <!--We use the scrolling class to make the photos scroll from the right to left and reverse-->
+            <div class="scrolling">
+                <marquee width="1570" scrollamount="8" behavior="alternate">
+                    <a href="page.html#irishCoffee"><img src="./resources/images/Coktails/irish-coffee.jpg" /></a>
+                    <a href="cooking.html#verrine"><img src="./resources/images/Cooking/verrine.jpeg" /></a>
+                    <a href="trend.html#beer-pong"><img src="./resources/images/Activity/beerpong.jpg" /></a>
+                    <a href="page.html#ginto"><img src="./resources/images/Coktails/ginto.jpg" /></a>
+                    <a href="cooking.html#millefeuille"><img src="./resources/images/Cooking/millefeuilleframb.jpeg" /></a>
+                    <a href="activity.html#post-it"><img src="./resources/images/Activity/post-it game.jpg" /></a>
+                </marquee>
+            </div>
+            <!--Contact us section whith a form to let an opinion-->
+            <br /><br />
+            <a href="contact.html"><h2 id="contact">Contact us</h2></a>
+            <img class="reseau" src="./resources/images/Home/reseau.jpg" width="500" heigt="60" margin-left="500px" />
+            <br />
+            <p2>We need your help! Do not hesitate to tell us what you preferred, what convinced you or not in our catalog, the various improvements to be made, everything is good to know. Your opinion allows us to set up new recipes and new ideas of organization of evening. </p2>
+            <div id="Opinion"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><h1 style="text-align: center;">Your Opinion <br /></h1></div>
+            <!--Creation of the form-->
+            <!--when we submit the infos, it will be delete-->
+            <form name="OpinionForm" onsubmit="OpinionForm()" class="OpinionForm" id="OpinionForm">
+                <div>
+                    <!--Name of the person who let a message-->
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" size="60" name="Name" />
+                </div>
+                <br />
+                <div>
+                    <!--Age of the person who let a message-->
+                    <label for="Age">Age: </label>
+                    <input type="text" id="Age" size="60" name="Age" />
+                </div>
+                <br />
+                <div>
+                    <!--Selection between the different type of evening propose-->
+                    <label>Select your favorite type of evening :</label>
+                    <select type="text" value="" name="evening">
+                        <option></option>
+                        <option>Couple evening</option>
+                        <option>Familly evening</option>
+                        <option>Friend evening</option>
+                    </select>
+                </div>
+                <br />
+                <div>
+                    <!--Selection between the different type of section-->
+                    <label>Select your favorite section :</label>
+                    <select type="text" value="" name="favSect">
+                        <option></option>
+                        <option>Activity</option>
+                        <option>Cooking</option>
+                        <option>Coktails</option>
+                    </select>
+                </div>
+                <br />
+                <div>
+                    <!--To know what to improve-->
+                    <label>Select the section you like the least :</label>
+                    <select type="text" value="" name="lessSect">
+                        <option></option>
+                        <option>Activity</option>
+                        <option>Cooking</option>
+                        <option>Coktails</option>
+                    </select>
+                </div>
+                <br />
+                <div>
+                    <!--Letting a comment of the choice-->
+                    <label for="comment">For more details explain why : </label>
+                    <textarea cols="62" id="comment" rows="10" name="comment"></textarea>
+                </div>
+                <div class="buttons">
+                    <!--button for reset or send the form-->
+                    <input type="button" value="submit" id="submit" />
+                    <input type="reset" value="reset" id="reset" />
+                </div>
+            </form>
+            <br /><br /><br />
+        </div>
+        <!-- Script in java-->
+        <script type="text/javascript" language="javascript">
+            /*function to click and make the vertical menu bouton appears or not*/
+            let Homenav = document.getElementById("Homenav");
+            let Home = document.getElementById("Home");
+            let fermer = document.getElementById("fermer");
+            //adding an event when we click on the Home button at the top left corner
+            Home.addEventListener("click", () => {
+                if (getComputedStyle(Homenav).display != "block") {
+                    Homenav.style.display = "block";//the homenav is now display
+                }
+            })
+            //to close the homenav
+            fermer.addEventListener("click", () => {
+                if (getComputedStyle(Homenav).display != "none") {
+                    Homenav.style.display = "none";//the homenav is now close
+                }
+            })
+            /*function for the sticky navbar*/
+            //we target the nav element
+            let objNav = document.getElementById("Nav");
+            let couple = document.getElementsByClassName("couple");
+            let friend = document.getElementsByClassName("friend");
+            let fam = document.getElementsByClassName("fam");
+            //we memorise the position of nav
+            let posNav = objNav.offsetTop;
+            function sticky() {
+                //pos of the cursor
+                var posCursor = this.pageYOffset;
+                //test of the difference between the scroll and nav
+                if (posNav - posCursor < 10) {
+                    objNav.style.position = "fixed";
+                    objNav.style.top = 0;
+                    objNav.style.zIndex = 1;
+                }
+                if (posCursor < 180) {
+                    objNav.style.position = "relative";
+                }
+            }
+            //navbar appears when wee scroll 
+            window.addEventListener("scroll", sticky);//use of the sticky function when we scroll
+
+            /*to scroll the selection section from the right*/
+            var select = document.querySelectorAll("figure")[0];
+            var posSelect = select.offsetTop;
+            function effect() {
+                var posCursor = this.pageYOffset;
+                if (posSelect - posCursor < 350) {
+                    select.style.left = 0;
+                    select.style.opacity = 1;
+                } else {
+                    select.style.left = "150%";
+                    select.style.opacity = 0;
+                }
+            }
+            //make the selection slide when we scroll near it
+            window.addEventListener("scroll", effect);
+
+            /*function for the Opinion form*/
+            //to verify the element of the form
+            function OpinionForm() {
+                //creation of the var for the Name Age and comment
+                var name = document.forms["OpinionForm"]["Name"];
+                var age = document.forms["OpinionForm"]["Age"];
+                var comment = document.forms["OpinionForm"]["comment"];
+                var liste1 = document.forms["OpinionForm"]["evening"];
+                var liste2 = document.forms["OpinionForm"]["favSect"];
+                var liste3 = document.forms["OpinionForm"]["lessSect"];
+
+                if (name.value == "") {//if name is empty
+                    alert("Enter your name");
+                    name.focus();
+                    return false;
+                }
+                //We test the value of the different attribut before the submit
+                if (age.value == "") {//if age is empty
+                    alert("Enter your age");
+                    age.focus();
+                    return false;
+                }
+                if (age.value < 10 || age.value > 100) {//if age is wrong
+                    alert("Enter a valid age");
+                    age.focus();
+                    return false;
+                }
+                //test of the list
+                if (liste1.selectedIndex == false) {
+                    alert("Choose an option in the evening selection");
+                    liste1.focus();
+                    return false;
+                }
+                if (liste2.selectedIndex == false) {
+                    alert("Choose an option in the favorite selection");
+                    liste2.focus();
+                    return false;
+                }
+                if (liste3.selectedIndex == false) {
+                    alert("Choose an option in the less selection");
+                    liste3.focus();
+                    return false;
+                }
+                //if the choice are the same its not good
+                if (liste2.selectedIndex == liste3.selectedIndex) {
+                    alert("Error : You choose the same section");
+                    liste3.focus();
+                    return false;
+                }
+                if (comment.value == "") {//if comment is empty
+                    alert("Enter a comment");
+                    comment.focus();
+                    return false;
+                }
+                return true;//else we return true because all is good
+            }
+            //Adding an event on the form button to make the form disappear when we submit our informations
+            const formBtn = document.querySelector("#submit")
+            formBtn.addEventListener("click", function (e) {
+                if (OpinionForm() == true) {//if the text of the form is good
+                    //we make the form disapears
+                    document.querySelector("#OpinionForm").style.display = "none"
+                    //We add a message with innerHTML to delete the YOUR OPINION title
+                    document.querySelector("#Opinion").innerHTML = `<h1> </h1>`
+                    e.preventDefault()//We use preventDefault to prevent the page from reloading
+                } else {
+                    e.preventDefault()
+                }
+
+            })
+        </script>
+
+    </body>
+</html>

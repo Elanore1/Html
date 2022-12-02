@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Site for coktails and games during evening  -->
+
+    <title>Evening Coktail</title>
+    <link rel="shortcut icon" type="image/png" href="./resources/images/EHL.png" />
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+    <link href="./resources/css/page.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar (on top of the site) -->
+    <div class="nav" id="Nav">
+        <ul>
+            <li>
+                <a href="index.html" id="Home">Home</a>
+                <div class="bar" id="Homenav">
+                    <img width="210" heigt="10" id="fermer" src="./resources/images/Home/croix.png" top="120px" />
+                    <b>
+                        <a href="#" class="bar-element"><img width="140" heigt="50" id="logo" src="./resources/images/Home/EH.png" top="70px" /></a>
+                        <a href="#" class="bar-element">ABOUT US</a>
+                        <a href="#Overview" class="bar-element"><p1>Overview</p1></a>
+                        <a href="#selection" class="bar-element">OUR SELECTION</a>
+                        <a href="#selection" class="bar-element"><p1>Familly</p1></a>
+                        <a href="#selection" class="bar-element"><p1>Friends</p1></a>
+                        <a href="#selection" class="bar-element"><p1>Lover</p1></a>
+                        <a href="#currentTrend" class="bar-element">CURRENT TRENDS </a>
+                        <a href="#Toptrend" class="bar-element"><p1>Top Trends</p1></a>
+                        <a href="#contact" class="bar-element"><p1>Contact-us</p1></a>
+                    </b>
+                </div>
+            </li>
+            <span class="titre-degrade">Evening House</span>
+            <li>
+                <a href="coktails.html">Coktails</a>
+                <ul class="sub">
+                    <li><a href="coktails.html#classic">Classics</a></li>
+                    <li><a href="coktails.html#alcohol-free">alcohol-free</a></li>
+                    <li><a href="coktails.html#trendy">Trendy cocktails</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="cooking.html">Cooking</a>
+                <ul class="sub">
+                    <li><a href="cooking.html#appetizer">Appetizer</a></li>
+                    <li><a href="cooking.html#menu">Menu</a></li>
+                    <li><a href="cooking.html#dessert">Dessert</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="activity.html">Activity</a>
+                <ul class="sub">
+                    <li><a href="activity.html#guessing">Guessing</a></li>
+                    <li><a href="activity.html#card">Card</a></li>
+                    <li><a href="activity.html#bluff">Bluff</a></li>
+                    <li><a href="activity.html#speed">Speed</a></li>
+                </ul>
+            </li>
+            <span class="logo"><img width="140" heigt="50" id="logo" src="./resources/images/Home/EH.png" /></span>
+        </ul>
+    </div>
+
+    <div class="rectangle"></div>
+    <h1 class="coktail-title"></h1>
+    <img class="img1"/>
+    <img class="img2"/>
+    <p class="coktail-descript"></p>
+    <img class="time" src="./resources/images/Coktails/time.jpg" />
+    <p class="recipe"> </p>
+    <p class="ingredient">
+        INGREDIENTS:
+    </p>
+    <div class="wrapper">
+    </div>
+    <div class="tips">
+     </div>
+
+
+    <script type="text/javascript" language="javascript">
+        /*function for the sticky navbar*/
+        //we target the nav element
+        let objNav = document.getElementById("Nav");
+        //we memorise the position of nav
+        let posNav = objNav.offsetTop;
+        function sticky() {
+            //pos of the cursor
+            var posCursor = this.pageYOffset;
+            //test of the difference between the scroll and nav
+            if (posNav - posCursor < 1) {
+                objNav.style.position = "fixed";
+                objNav.style.top = 0;
+                objNav.style.zIndex = 1000;
+            }
+            if (posCursor < 180) {
+                objNav.style.position = "relative";
+            }
+        }
+        window.addEventListener("scroll", sticky);//use of the stiky function when we scroll
+
+        //we open the coktail that was click on by the hash
+        var myCoktail = location.hash;
+        //In relation to this we generate the associated page
+        if (myCoktail == "#ginto") {
+            document.querySelector('.coktail-title').innerHTML = "GIN TONIC";
+            document.querySelector('.img1').src = "./resources/images/Coktails/ginto.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/citron.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "The Gin Tonic is the perfect summer cocktail, refreshing, easy and quick to prepare. It dates back to the 19th century when gin was combined with quinine to make the drink less bitter.";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            li1.textContent = "4 cl Gibson's Gin Coktail";
+            ul.appendChild(li1);
+            li2.textContent = "French tonic please";
+            ul.appendChild(li2);
+            li3.textContent = "1 Fresh Lemon Peel";
+            ul.appendChild(li3);
+            li4.textContent = "Ice Cubes";
+            ul.appendChild(li4);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />Place your ice cubes in a large pool glass</p></div><div><p><strong>STEP 2</strong><br /><br />Pour in the 4 cl of Gibson's gin</p></div><div><p><strong>STEP 3</strong><br /><br />For a perfect mix of tonic and gin, gently tilt your glass before adding the La French tonic</p></div><div><p><strong>STEP 4</strong><br /><br />Flavor your Gin Tonic with the zest of a fresh lemon</p></div><div><p><strong>STEP 5</strong><br /><br />Mix it gently with a cocktail spoon to release all the flavors of your Gin Tonic.</p></div><div><p><strong>STEP 6</strong><br /><br />Your cocktail is ready: enjoy!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> COCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Very little sugar, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#cuba") {
+            document.querySelector('.coktail-title').innerHTML = "CUBA LIBRE";
+            document.querySelector('.img1').src = "./resources/images/Coktails/cuba.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/citron.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "The Cuba Libre dates from the end of the Cuban War of Independence. One of the soldiers present ordered the ingredients that make up the Cuba Libre and toasted to the cry of 'Por Cuba Libre'!";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            li1.textContent = "4 cl of Old Nick Amber Island Rum";
+            ul.appendChild(li1);
+            li2.textContent = "12 cl of Cola";
+            ul.appendChild(li2);
+            li3.textContent = "2 cl of Squeezed Lemon Juice";
+            ul.appendChild(li3);
+            li4.textContent = "Ice cubes";
+            ul.appendChild(li4);
+            p.appendChild(ul);
+
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />Add the ice cubes previously chilled in the refrigerator in a long drink glass</p></div><div><p><strong>STEP 2</strong><br /><br />Squeeze the lime juice in the glass</p></div><div><p><strong>STEP 3</strong><br /><br />Pour the 4 cl of Old Nick's Amber Rum</p></div><div><p><strong>STEP 4</strong><br /><br />Top up with cola</p></div><div><p><strong>STEP 5</strong><br /><br />Stir gently with a cocktail spoon.</p></div><div><p><strong>STEP 6</strong><br /><br />Enjoy your cocktail chilled!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> COCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Very little sugar, everything to enjoy without gaining weight</p></div>`;
+        }
+        //if its a mojito we place the element for a mojito
+        if (myCoktail == "#mojito") {
+            document.querySelector('.coktail-title').innerHTML = "MOJITO";
+            document.querySelector('.img1').src = "./resources/images/Coktails/mojito.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/menthe.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "This rum-based Cuban cocktail, whose reputation is well established, is quite easy to prepare and is always appreciated.";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            var li5 = document.createElement('li');
+            var li6 = document.createElement('li');
+            li1.textContent = "4 cl of 40° SAINT JAMES White Rum";
+            ul.appendChild(li1);
+            li2.textContent = "1/2 Fresh Lime";
+            ul.appendChild(li2);
+            li3.textContent = "8 Fresh Mint Leaves";
+            ul.appendChild(li3);
+            li4.textContent = "2 cl of CANADOU Cane Syrup";
+            ul.appendChild(li4);
+            li5.textContent = "Sparkling Water";
+            ul.appendChild(li5);
+            li6.textContent = "Crushed Ice";
+            ul.appendChild(li6);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />Add the mint leaves, cut the lemon and put it in the glass</p></div><div><p><strong>STEP 2</strong><br /><br />Add the cane sugar and mash it all together</p></div><div><p><strong>STEP 3</strong><br /><br />Add the Saint James Rum</p></div><div><p><strong>STEP 4</strong><br /><br />Prepare the crushed ice and mix it all together</p></div><div><p><strong>STEP 5</strong><br /><br />Add your crushed ice in the glass</p></div><div><p><strong>STEP 6</strong><br /><br />Dilute your cocktail with sparkling water and mix it with a spoon or a mojito stirrer</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> COCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Very little sugar, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#virginspritz") {
+            document.querySelector('.coktail-title').innerHTML = "Virgin Spritz";
+            document.querySelector('.img1').src = "./resources/images/Coktails/virginspritz.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/oranges.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "The Spritz is the most famous Italian aperitif but even those who prefer to share an aperitif with friends without drinking alcohol can still enjoy this cocktail in its non-alcoholic variant.";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            var li5 = document.createElement('li');
+            li1.textContent = "5 cl of without Alcohol Venezzio";
+            ul.appendChild(li1);
+            li2.textContent = "5 cl of D'Artigny Classic Alcohol-Free Sparkling Wine";
+            ul.appendChild(li2);
+            li3.textContent = "4 cl Caraïbos Orange Juice";
+            ul.appendChild(li3);
+            li4.textContent = "5 cl of Lemonade";
+            ul.appendChild(li4);
+            li5.textContent = "Ice Cubes";
+            ul.appendChild(li5);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />In a shaker half filled with ice cubes, pour Venezzio non-alcoholic bitter, Caraïbos orange juice and lemonade</p></div><div><p><strong>STEP 2</strong><br /><br />Shake vigorously for a few seconds to obtain a homogeneous preparation</p></div><div><p><strong>STEP 3</strong><br /><br />Pour the resulting drink into a tumbler glass, ideal for a long drink</p></div><div><p><strong>STEP 4</strong><br /><br />Top it off with D'Artigny Classic Non-Alcoholic Effervescent.</p></div><div><p><strong>STEP 5</strong><br /><br />Decorate with two orange slices for color and deliciousness</p></div><div><p><strong>STEP 6</strong><br /><br />Virgin Spritz is best drunk chilled, serve it now!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> MOCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Without alcohol, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#venezzion") {
+            document.querySelector('.coktail-title').innerHTML = "Venezzio In Love";
+            document.querySelector('.img1').src = "./resources/images/Coktails/venezzion.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/basilic.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "Venezzio comes straight from Italy where it is elaborated and bottled and thus respects all the tradition of the true 'aperitivo italiano'.";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            li1.textContent = "2.5 cl Caraïbos Strawberry Nectar";
+            ul.appendChild(li1);
+            li2.textContent = "10 cl of Venezzio Bitter";
+            ul.appendChild(li2);
+            li3.textContent = "6 or 7 Basil Leaves";
+            ul.appendChild(li3);
+            li4.textContent = "1 cl Caraïbos Lime Juice";
+            ul.appendChild(li4);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />In an Old Fashioned glass, crush 6 or 7 basil leaves.</p></div><div><p><strong>STEP 2</strong><br /><br />Fill the glass with ice cubes.</p></div><div><p><strong>STEP 3</strong><br /><br />Pour in Caraïbos lime juice, Caraïbos strawberry nectar and Venezzio Bitter.</p></div><div><p><strong>STEP 4</strong><br /><br />Stir and garnish with red fruits and mint.</p></div><div><p><strong>STEP 5</strong><br /><br />All that's left to do is enjoy!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> MOCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Without alcohol, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#peach-freeze") {
+            document.querySelector('.coktail-title').innerHTML = "Peach'n Freeze";
+            document.querySelector('.img1').src = "./resources/images/Coktails/peach-freeze.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/lichi.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "Ready to be enjoyed, the Peach'n Freeze is a non-alcoholic cocktail that is perfect for your aperitifs with friends or to accompany your fruity desserts";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            var li5 = document.createElement('li');
+            li1.textContent = "8 cl Non-Alcoholic Peach Sparkling Wine";
+            ul.appendChild(li1);
+            li2.textContent = "5 cl Lychee Nectar";
+            ul.appendChild(li2);
+            li3.textContent = "1 cl Pink Grapefruit Syrup";
+            ul.appendChild(li3);
+            li4.textContent = "1 cl Squeezed Lime Juice";
+            ul.appendChild(li4);
+            li5.textContent = "1 Drop of Orange Flower Water";
+            ul.appendChild(li5);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />In a shaker, pour 1 cl of pressed lime juice, 1 cl of pink grapefruit syrup and 5 cl of lychee nectar.</p></div><div><p><strong>STEP 2</strong><br /><br />Add a drop of orange blossom water.</p></div><div><p><strong>STEP 3</strong><br /><br />Shake and strain your non-alcoholic preparation with a cocktail strainer.</p></div><div><p><strong>STEP 4</strong><br /><br />Serve in a glass on a few ice cubes.</p></div><div><p><strong>STEP 5</strong><br /><br />Complete with the 8 cl of peach sparkling wine without alcohol.</p></div><div><p><strong>STEP 6</strong><br /><br />Enjoy chilled!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> MOCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Without alcohol, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#blueIce") {
+            document.querySelector('.coktail-title').innerHTML = "The Blue Ice";
+            document.querySelector('.img1').src = "./resources/images/Coktails/blueIce.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/citronV.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "By the taste and the ingredients, the blue Ice has similarities with the blue lagoon in which the lime is replaced by a yellow lemon.";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            var li5 = document.createElement('li');
+            li1.textContent = "4 cl Poliakov Vodka";
+            ul.appendChild(li1);
+            li2.textContent = "4 cl Caraïbos Lime Juice";
+            ul.appendChild(li2);
+            li3.textContent = "4 cl Blue Curaçao";
+            ul.appendChild(li3);
+            li4.textContent = "1 cl Canadou Cane Syrup";
+            ul.appendChild(li4);
+            li5.textContent = "Ice Cubes";
+            ul.appendChild(li5);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />In a shaker filled with ice cubes, pour 4 cl of Poliakov vodka, 4 cl of Caraïbos lime juice, 4 cl of blue curaçao and 1 cl of Canadou cane syrup.</p></div><div><p><strong>STEP 2</strong><br /><br />Stir vigorously for a few seconds until the shaker is cool.</p></div><div><p><strong>STEP 3</strong><br /><br />Pour into a low flared glass, keeping the ice cubes with a cocktail strainer.</p></div><div><p><strong>STEP 4</strong><br /><br />To add a decorative touch to the cocktail, place a slice of lime on the rim of the glass.</p></div><div><p><strong>STEP 5</strong><br /><br />Enjoy chilled!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> COCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Very little sugar, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#irishCoffee") {
+            document.querySelector('.coktail-title').innerHTML = "Irish Coffee";
+            document.querySelector('.img1').src = "./resources/images/Coktails/irish-coffee.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/chocolat.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "Irish Coffee was created by Joseph Sheridan, a pub owner in Foynes, Ireland, during the Second World War. The idea was to warm up the soldiers with a hot drink that would invigorate them.";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 10 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            var li5 = document.createElement('li');
+            li1.textContent = "3 cl of Bushmills Irish Whiskey";
+            ul.appendChild(li1);
+            li2.textContent = "4 cl of Coffee";
+            ul.appendChild(li2);
+            li3.textContent = "2 Sugar Cubes";
+            ul.appendChild(li3);
+            li4.textContent = "Fresh Cream";
+            ul.appendChild(li4);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />Dip a large clear cup into hot water to warm it up.Dry it and set it aside.</p></div><div><p><strong>STEP 2</strong><br /><br />Whip the fresh creme and set aside.</p></div><div><p><strong>STEP 3</strong><br /><br />Heat the Bushmills Irish whiskey with the sugar. The mixture should be very hot, but not boiling.</p></div><div><p><strong>STEP 4</strong><br /><br />Pour the sweetened irish whiskey into the transparent cup.</p></div><div><p><strong>STEP 5</strong><br /><br />Add the coffee, also hot, gently so that it does not mix with the irish whiskey.</p></div><div><p><strong>STEP 6</strong><br /><br />Finally, add the whipped cream with the back of a spoon. Enjoy your Irish coffee!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> COCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Very little sugar, everything to enjoy without gaining weight</p></div>`;
+        }
+        if (myCoktail == "#ginDaisy") {
+            document.querySelector('.coktail-title').innerHTML = "Gin Daisy";
+            document.querySelector('.img1').src = "./resources/images/Coktails/gindaisy.jpg";
+            document.querySelector('.img2').src = "./resources/images/Coktails/citronV.jpg";
+            document.querySelector('.coktail-descript').innerHTML = "This particular cocktail is rather unique as it takes a lemonade-like combination of ingredients and mixes it with gin. This is the kind of cocktail you get when you want to enjoy a summer day";
+            document.querySelector('.recipe').innerHTML = "RECIPE TIME : 5 MIN";
+            //list of ingredient
+            var p = document.querySelector('.ingredient');
+            var ul = document.createElement('ul');
+            var li1 = document.createElement('li');
+            var li2 = document.createElement('li');
+            var li3 = document.createElement('li');
+            var li4 = document.createElement('li');
+            var li5 = document.createElement('li');
+            li1.textContent = "3 cl Gibson's Gin";
+            ul.appendChild(li1);
+            li2.textContent = "1 cl of L'Héritier-Guyot Triple Sec";
+            ul.appendChild(li2);
+            li3.textContent = "1 cl Canadou Cane Syrup";
+            ul.appendChild(li3);
+            li4.textContent = "1/2 fresh yellow lemon";
+            ul.appendChild(li4);
+            li5.textContent = "Ice cubes";
+            ul.appendChild(li5);
+            p.appendChild(ul);
+            //Step of the coktail
+            document.querySelector('.wrapper').innerHTML = `<div><p><strong>STEP 1</strong><br /><br />Use a shaker filled with ice cubes.</p></div><div><p><strong>STEP 2</strong><br /><br />Pour Gibson's gin, Canadou cane syrup, the juice of half a lemon and L'Héritier-Guyot triple sec.</p></div><div><p><strong>STEP 3</strong><br /><br />Shake vigorously for a few seconds until the shaker is cold, almost icy.</p></div><div><p><strong>STEP 4</strong><br /><br />Pour into a glass, retaining the ice cubes with a strainer.</p></div><div><p><strong>STEP 5</strong><br /><br />Decorate with a slice of lemon or some shelled lychees.</p></div><div><p><strong>STEP 6</strong><br /><br />Your cocktail is ready: enjoy!</p></div>`;
+            //tips
+            document.querySelector('.tips').innerHTML = `<div class="tips-title"><br />OUR TIPS FOR A <strong>BETTER QUALITY</strong> COCKTAIL :</div><div><img height="50px" width="50px" src="./resources/images/Coktails/product.png" /><p>SELECT NATURAL PRODUCTS<br /><br />Use fresh market products to have a better taste in mouth</p></div><div><img height="50px" width="50px" src="./resources/images/Coktails/time.png" /><p>VERY SHORT PREPARATION TIME<br /><br />A practical recipe that can be made in just a few minutes</p></div><div><img height="55px" width="65px" src="./resources/images/Coktails/light.png" /><p>VERY LIGHT RECIPE<br /><br />Very little sugar, everything to enjoy without gaining weight</p></div>`;
+        }
+
+    </script>
+</body>
+</html>

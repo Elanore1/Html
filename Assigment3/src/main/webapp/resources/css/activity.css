@@ -1,0 +1,52 @@
+/*font police*/
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+/*background color*/
+body {
+    background-color:black ;
+}
+
+.img {
+    width: 100%;
+    padding: 0 0 16% 0;
+    background: white;
+}
+
+.guessing {
+    float: left;
+    margin: 0 30px 15px 30px;
+    background-color: #000000;
+}
+
+.Text {
+    font-size: 30px;
+    background: linear-gradient(red,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-size: 20px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2em;
+}
+
+p3 {
+    font-size: 25px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2em;
+}
+
+.text {
+    margin: 0 30px 15px 30px;
+    background-color: white;
+    top: 3400px;
+    left: 650px;
+    position: absolute;
+}

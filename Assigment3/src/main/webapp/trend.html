@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Site for coktails and games during evening  -->
+    <title>Evening House</title>
+    <link rel="shortcut icon" type="image/png" href="./resources/images/Home/EHL.png" />
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet" />
+    <link href="./resources/css/trend.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!-- Navbar (on top of the site) -->
+    <div class="nav" id="Nav">
+        <ul>
+            <li>
+                <a href="index.html" id="Home">Home</a>
+            </li>
+            <span class="titre-degrade">Evening House</span>
+            <li>
+                <a href="coktails.html">Coktails</a>
+                <ul class="sub">
+                    <li><a href="coktails.html#classic">Classics</a></li>
+                    <li><a href="coktails.html#alcohol-free">alcohol-free</a></li>
+                    <li><a href="coktails.html#trendy">Trendy cocktails</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="cooking.html">Cooking</a>
+                <ul class="sub">
+                    <li><a href="cooking.html#appetizer">Appetizer</a></li>
+                    <li><a href="cooking.html#menu">Menu</a></li>
+                    <li><a href="cooking.html#dessert">Dessert</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="activity.html">Activity</a>
+                <ul class="sub">
+                    <li><a href="activity.html#guessing">Guessing</a></li>
+                    <li><a href="activity.html#card">Card</a></li>
+                    <li><a href="activity.html#bluff">Bluff</a></li>
+                    <li><a href="activity.html#speed">Speed</a></li>
+                </ul>
+            </li>
+            <span class="logo"><img width="140" heigt="50" id="logo" src="./resources/images/Home/EH.png" /></span>
+        </ul>
+    </div><div class="img">
+        <ul class="transparent-grey">Current Trend</ul>
+        <img src="./resources/images/Home/fleur.jpg" />
+        <!-- Section overview -->
+        <h1 id="Overview"><br /><br />Find the Trends of the moment !<br /><br /></h1>
+        <p2> We propose you our best selection for this beginning of winter. Whether with friends or family you will find our evening games, our most tasty menus with a wide choice of drinks.These are our favorites of the moment, which change every week according to the opinions of Internet users, do not hesitate to give yours!</p2>
+    </div>
+
+    <div class="img">
+        <h2 id="post-it"><br /><br /><br /><br /><br /><br /><br />The Post-it Game :<br /></h2>
+        <a href="activity.html#post-it"><img src="./resources/images/Activity/post-it game.jpg" width="600" class="trend" /></a>
+        <p class="text">
+            <br />A classic of evenings with friends or family, the post-it game is simple.<br /><br />You have to write on a post-it the name of a character, and stick it on the forehead of your right neighbor.The goal is to guess the name of the personality. The youngest player starts by asking a question. If the player gets a "yes" answer, he or she can continue with another question. If the answer is "no", it is the right-hand neighbor's turn to ask a question... until the table is full.<br />Between 3 and 8 players are needed for this game.
+        </p>
+    </div>
+    <h2 id="beer-pong">The Beer-pong :<br /><br /></h2>
+    <a href="activity.html#"><img src="./resources/images/Activity/beerpong.jpg" width="700" class="black" /></a>
+    <p class="text">
+        <br />It's the king of drinking games: Beer pong<br /><br />One of the most famous games in the world, Beer Pong is a competitive game that is simple to organize. You need 6 plastic cups and a small, light ball.<br /><br />At the end of a table, you place 6 cups and fill them halfway with beer or another beverage. Arrange them like bowling pins.<br /><br />The player must pick up the ball, stand at the other end of the table and throw the ball into one of the cups.<br /><br />
+    </p>
+    <div class="img">
+        <h2 id="venezzio"><br /><br />The Venezzio :<br /><br /></h2>
+        <a href="coktails.html#"><img src="./resources/images/Coktails/venezzion.jpg" width="400" height="500" class="pos2" /></a>
+        <p class="text2">
+            <br /><br /><br />Venezzio comes straight from Italy where it is elaborated and bottled and thus respects all the tradition of the true "aperitivo italiano":<br /><br />Its characteristic bitterness, its charm, its originality and the sense of sharing.<br /><br />The colorful alliance of tradition and modernity without moderation!
+        </p>
+    </div>
+
+    <script type="text/javascript" language="javascript">
+        /*function for the sticky navbar*/
+        //we target the nav element
+        let objNav = document.getElementById("Nav");
+        //we memorise the position of nav
+        let posNav = objNav.offsetTop;
+        function sticky() {
+            //pos of the cursor
+            var posCursor = this.pageYOffset;
+            //test of the difference between the scroll and nav
+            if (posNav - posCursor < 1) {
+                objNav.style.position = "fixed";
+                objNav.style.top = 0;
+                objNav.style.zIndex = 1;
+            }
+            if (posCursor < 180) {
+                objNav.style.position = "relative";
+            }
+        }
+        window.addEventListener("scroll", sticky);//use of the stiky function when we scroll
+    </script>
+
+</body>
